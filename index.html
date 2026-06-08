@@ -6,10 +6,9 @@
     <title>Tayyib Investments LLC | Registered Investment Adviser</title>
     <style>
         :root {
-            --primary: #0f2d4a;       /* Deep Trust Blue */
-            --accent: #bc2a5c;        /* Logo Berry Red Accent */
-            --accent-light: #fdf2f5;  /* Soft Pink Hue for Highlights */
-            --text-dark: #2d3748;
+            --primary-text: #1c2257;   /* Deep Navy Text */
+            --heading-color: #ca396f;  /* Elegant Berry/Pink Heading */
+            --accent-light: #fdf2f5;   /* Soft Light Pink Tint */
             --text-light: #f7fafc;
             --bg-light: #f8fafc;
             --border: #e2e8f0;
@@ -23,12 +22,12 @@
         }
 
         body {
-            color: var(--text-dark);
+            color: var(--primary-text);
             line-height: 1.6;
             background-color: #ffffff;
         }
 
-        /* Navigation Header with Integrated Logo */
+        /* Navigation Header */
         nav {
             background-color: #ffffff;
             border-bottom: 1px solid var(--border);
@@ -42,7 +41,7 @@
             max-width: 1100px;
             margin: 0 auto;
             display: flex;
-            justify-content: center; /* Centers the branded identity layout */
+            justify-content: center;
             align-items: center;
         }
 
@@ -54,7 +53,6 @@
             padding: 0.5rem 0;
         }
 
-        /* Logo sits cleanly behind/centered with text spacing adjustments */
         .logo-bg {
             height: 110px;
             width: auto;
@@ -65,7 +63,7 @@
         .logo-text {
             font-size: 2.2rem;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--primary-text);
             letter-spacing: -0.5px;
             z-index: 2;
             text-align: center;
@@ -73,11 +71,11 @@
 
         /* Hero Banner Section */
         header {
-            background: linear-gradient(135deg, #0f2d4a 0%, #173f64 100%);
+            background: linear-gradient(135deg, #1c2257 0%, #2a337e 100%);
             color: var(--text-light);
             padding: 5.5rem 2rem;
             text-align: center;
-            border-bottom: 4px solid var(--accent);
+            border-bottom: 4px solid var(--heading-color);
         }
 
         .hero-container {
@@ -90,6 +88,7 @@
             margin-bottom: 1.25rem;
             font-weight: 700;
             letter-spacing: -0.5px;
+            color: #ffffff; /* Enhanced contrast against dark background */
         }
 
         header p {
@@ -98,11 +97,12 @@
             font-weight: 300;
             max-width: 700px;
             margin: 0 auto;
+            color: #ffffff;
         }
 
         /* Content Base Styling */
         section {
-            padding: 5.5rem 2rem;
+            padding: 5rem 2rem;
             max-width: 1100px;
             margin: 0 auto;
         }
@@ -110,8 +110,8 @@
         .section-title {
             text-align: center;
             font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 3.5rem;
+            color: var(--heading-color);
+            margin-bottom: 2.5rem;
             position: relative;
         }
 
@@ -120,209 +120,5 @@
             display: block;
             width: 60px;
             height: 3px;
-            background-color: var(--accent);
-            margin: 12px auto 0 auto;
-        }
-
-        /* Columns Layout */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .card {
-            background-color: var(--bg-light);
-            padding: 2.5rem;
-            border-radius: 6px;
-            border: 1px solid var(--border);
-            border-top: 3px solid var(--primary);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-
-        .card h3 {
-            color: var(--primary);
-            margin-bottom: 1.25rem;
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-
-        /* Operational Profile Area */
-        .framework-box {
-            background-color: var(--primary);
-            color: var(--text-light);
-            padding: 3.5rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-            box-shadow: 0 12px 24px rgba(15, 45, 74, 0.15);
-        }
-
-        .framework-box h3 {
-            color: #ffffff;
-            font-size: 1.6rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .framework-list {
-            list-style: none;
-            margin-top: 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 1.5rem;
-        }
-
-        @media (max-width: 600px) {
-            .framework-list {
-                grid-template-columns: 1fr;
-            }
-            .logo-text { font-size: 1.7rem; }
-            .logo-bg { height: 90px; }
-        }
-
-        .framework-list li {
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 1.25rem 1.5rem 1.25rem 3rem;
-            border-radius: 6px;
-            position: relative;
-            border-left: 3px solid var(--accent);
-        }
-
-        .framework-list li::before {
-            content: "✓";
-            position: absolute;
-            left: 1.2rem;
-            top: 1.2rem;
-            color: #ffffff;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        /* Communication Section */
-        .contact-container {
-            text-align: center;
-            background-color: var(--accent-light);
-            padding: 4rem 2rem;
-            border-radius: 8px;
-            border: 1px solid rgba(188, 42, 92, 0.1);
-        }
-
-        .contact-email {
-            font-weight: 600;
-            color: var(--accent);
-            font-size: 1.3rem;
-            margin-top: 1rem;
-            letter-spacing: 0.5px;
-        }
-
-        /* Regulatory Disclosures & Footer */
-        footer {
-            background-color: #081624;
-            color: #a0aec0;
-            padding: 4.5rem 2rem 2.5rem 2rem;
-            font-size: 0.85rem;
-            border-top: 4px solid var(--accent);
-        }
-
-        .footer-container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .disclosure-text {
-            text-align: justify;
-            line-height: 1.75;
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #14273a;
-        }
-
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <div class="nav-container">
-            <div class="brand-wrapper">
-                <img src="final logo.png" alt="Tayyib Investments Logo" class="logo-bg">
-                <div class="logo-text">Tayyib Investments LLC</div>
-            </div>
-        </div>
-    </nav>
-
-    <header>
-        <div class="hero-container">
-            <h1>Evidence-Based Wealth Advisory</h1>
-            <p>Grounding investment strategies in disciplined, long-term strategic asset allocation and passive asset structures designed for enduring clarity.</p>
-        </div>
-    </header>
-
-    <section>
-        <h2 class="section-title">Core Methods of Analysis</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Fundamental Analysis</h3>
-                <p>Evaluating long-term economic realities and financial health parameters across market segments to ensure foundational investment stability.</p>
-            </div>
-            <div class="card">
-                <h3>Quantitative Review</h3>
-                <p>Applying structured statistical modeling and empirical performance evaluations to systematically control downside risks and optimize allocation structures.</p>
-            </div>
-            <div class="card">
-                <h3>Macroeconomic Analysis</h3>
-                <p>Synthesizing broad marketplace trends, changing monetary policies, and strategic market indicators to capture global allocation opportunities cleanly.</p>
-            </div>
-        </div>
-    </section>
-
-    <section style="background-color: #fcfdfe; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
-        <div style="max-width: 1100px; margin: 0 auto;">
-            <h2 class="section-title">Professional Operating Model</h2>
-            <div class="framework-box">
-                <h3>Our Fiduciary Operational Structure</h3>
-                <p>We are dedicated to providing pure, independent fee-for-service advice completely isolated from traditional transactional conflicts of interest. Our operational model is explicitly defined:</p>
-                <ul class="framework-list">
-                    <li><div><strong>Advice-Only Strategy:</strong> We limit our scope strictly to objective investment advice; we do not accept direct management or custody of client assets.</div></li>
-                    <li><div><strong>Non-Discretionary Framework:</strong> We advise while you retain complete asset execution control. No choices are made without your prior explicit authorization.</div></li>
-                    <li><div><strong>Zero Speculative Strategy:</strong> Our rules strictly prohibit high-risk practices such as short selling, margin deployment, or speculative trading styles.</div></li>
-                    <li><div><strong>No Third-Party Solicitors:</strong> We employ no promoters, distributors, or solicitors, guaranteeing that our client engagements remain entirely transparent and direct.</div></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="contact-container">
-            <h2 class="section-title" style="margin-bottom: 1.5rem;">Corporate Communications</h2>
-            <p style="font-size: 1.1rem; max-width: 650px; margin: 0 auto; color: #4a5568;">
-                To explore our strategic asset management methodology or learn more regarding our independent operational model, reach out directly.
-            </p>
-            <p class="contact-email">info@tayyibinvestments.com</p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-container">
-            <div class="disclosure-text">
-                <strong>Regulatory Disclosures:</strong> Tayyib Investments LLC is a registered investment adviser. Information presented on this platform is for educational and informational purposes only and does not constitute an explicit individual offer or solicitation to purchase or liquidate specific securities. All market structures involve systemic risk of loss, including the possible loss of original principal. Past performance is never indicative of future operational outcomes. The firm's advice-only consultation services are completely non-discretionary and exclude account fee deductions or custodial asset holdings.
-            </div>
-            <div class="footer-bottom">
-                <div>&copy; 2026 Tayyib Investments LLC. All rights reserved.</div>
-                <div>Principal Office: Ohio</div>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+            background-color: var(--heading-color);
+            margin: 12px auto
