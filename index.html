@@ -121,4 +121,360 @@
             width: 60px;
             height: 3px;
             background-color: var(--heading-color);
-            margin: 12px auto
+            margin: 12px auto 0 auto;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            color: var(--primary-text);
+            max-width: 900px;
+            margin: 0 auto 2.5rem auto;
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--bg-light);
+            padding: 2rem;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            border-top: 3px solid var(--heading-color);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            color: var(--heading-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .card-meta {
+            display: inline-block;
+            background-color: var(--accent-light);
+            color: var(--heading-color);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Operational Framework Area */
+        .framework-box {
+            background-color: var(--primary-text);
+            color: var(--text-light);
+            padding: 3rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            box-shadow: 0 12px 24px rgba(28, 34, 87, 0.15);
+        }
+
+        .framework-box h3 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .framework-list {
+            list-style: none;
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .framework-list {
+                grid-template-columns: 1fr;
+            }
+            .logo-text { font-size: 1.7rem; }
+            .logo-bg { height: 90px; }
+            .disc-box { padding: 1.5rem !important; }
+        }
+
+        .framework-list li {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 1.25rem 1.5rem 1.25rem 3rem;
+            border-radius: 6px;
+            position: relative;
+            border-left: 3px solid var(--heading-color);
+            color: #ffffff;
+        }
+
+        .framework-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 1.2rem;
+            top: 1.2rem;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* Discouraged Items List */
+        .discouraged-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 2rem;
+        }
+
+        .discouraged-list {
+            list-style: none;
+        }
+
+        .discouraged-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-text);
+        }
+
+        .discouraged-list li::before {
+            content: "✕";
+            position: absolute;
+            left: 0;
+            color: var(--heading-color);
+            font-weight: bold;
+        }
+
+        /* Custom Information & Disclaimer Blocks */
+        .disc-box {
+            background-color: #fafafa;
+            border-left: 4px solid var(--heading-color);
+            padding: 2.5rem;
+            border-radius: 0 6px 6px 0;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--primary-text);
+        }
+
+        .disc-box h4 {
+            color: var(--heading-color);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .note-highlight {
+            background-color: #fffbeb;
+            border: 1px dashed #f59e0b;
+            padding: 1.25rem;
+            border-radius: 6px;
+            margin-top: 2rem;
+            color: #b45309;
+            font-size: 0.95rem;
+        }
+
+        /* Communication Section */
+        .contact-container {
+            text-align: center;
+            background-color: var(--accent-light);
+            padding: 4rem 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(202, 57, 111, 0.1);
+        }
+
+        .contact-email {
+            font-weight: 600;
+            color: var(--heading-color);
+            font-size: 1.3rem;
+            margin-top: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Regulatory Disclosures & Footer */
+        footer {
+            background-color: #0d1130;
+            color: #a0aec0;
+            padding: 4.5rem 2rem 2.5rem 2rem;
+            font-size: 0.85rem;
+            border-top: 4px solid var(--heading-color);
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .disclosure-text {
+            text-align: justify;
+            line-height: 1.75;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #1c2257;
+            color: #cbd5e1;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            color: #cbd5e1;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="brand-wrapper">
+                <img src="final logo.png" alt="Tayyib Investments Logo" class="logo-bg">
+                <div class="logo-text">Tayyib Investments LLC</div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="hero-container">
+            <h1>Evidence-Based Wealth Advisory</h1>
+            <p>Grounding investment strategies in disciplined, long-term strategic asset allocation and passive asset structures designed for enduring clarity.</p>
+        </div>
+    </header>
+
+    <section>
+        <h2 class="section-title">Introduction & Background</h2>
+        <div class="intro-text">
+            <p style="margin-bottom: 1.5rem;">
+                Tayyib Investments LLC, founded in 2026, provides investment advisory services aligned with halal or ethical principles. We prioritize investments in businesses that reflect our clients' values. Our approach aims to meet the investment objectives of our clients while strictly discouraging values-conflicting allocations.
+            </p>
+            <p style="font-size: 0.95rem; font-style: italic; background: #f8fafc; padding: 1rem; border-radius: 6px; border: 1px solid var(--border);">
+                Tayyib Investments LLC is owned by Abdul Basit, who retains 100% ownership as of the date of this publication. More information about the owner can be found in the Brochure Supplement attached at the end of our complete regulatory firm disclosure brochure.
+            </p>
+        </div>
+
+        <div class="discouraged-container">
+            <h3 style="color: var(--heading-color); margin-bottom: 1.5rem; font-size: 1.25rem; text-align: center;">Discouraged Investment Parameters</h3>
+            <ul class="discouraged-list">
+                <li><strong>Significant Interest Components:</strong> Avoiding assets directly tied to compounding interest-bearing lines or mechanisms.</li>
+                <li><strong>Unethical or Immoral Businesses:</strong> Complete avoidance of businesses involved in alcohol, gambling, weapons manufacturing, and similar industries.</li>
+                <li><strong>Speculative Options:</strong> Restricting standard speculative practices like uncovered options strategies.</li>
+                <li><strong>Speculative Alternatives:</strong> Restricting highly volatile, short-term alternative instruments including currencies and collectibles.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section style="background-color: #fcfdfe; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+        <h2 class="section-title">Services Offered</h2>
+        <div class="intro-text">
+            Our services are purely advisory in nature and are suitable for clients seeking advice on financial matters. The clients are responsible for acting or not acting on the recommendations and for executing trades, if applicable. Tayyib Investments does not take custody of clients’ assets and only provides a recommendation report at the conclusion of the services.
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <span class="card-meta">Hourly or Flat-Rate</span>
+                <h3>Financial Planning &amp; Wealth Advice</h3>
+                <p>Personalized services designed to address a variety of client objectives. These may include retirement feasibility studies, cash flow and budget analysis, education funding planning, insurance needs analysis, and estate planning guidance. Offered through Single-Goal or Comprehensive engagements tailored to your specific situation as an advice-only service where you retain full implementation responsibility.</p>
+            </div>
+            <div class="card">
+                <span class="card-meta">Hourly Fee</span>
+                <h3>Investment Assessment</h3>
+                <p>We assess listed securities, private investments, and other legitimate businesses using fundamental analysis to advise clients if an investment is fundamentally sound. This comprehensive approach reviews an investment’s history and estimates future performance in the context of industry trends and broader economic factors.</p>
+            </div>
+            <div class="card">
+                <span class="card-meta">Flat-Rate Fee</span>
+                <h3>Portfolio Optimization</h3>
+                <p>For clients seeking ongoing guidance, the Firm provides optimization services based on account statements, holdings data, and financial information provided directly by the client. The Firm reviews this data and provides specific written rebalancing or reallocation recommendations to the client annually.</p>
+            </div>
+            <div class="card">
+                <span class="card-meta">Hourly Fees</span>
+                <h3>Portfolio Reviews</h3>
+                <p>Typically involves reviewing existing clients’ already optimized portfolios to ensure they align cleanly with objectives, risk tolerance, and updated circumstances. The frequency (quarterly or semiannual) is determined at the time optimization is sought. These are completely optional follow-up visits between 1–11 months from the original date.</p>
+            </div>
+        </div>
+
+        <div class="note-highlight">
+            <strong>Operational Note:</strong> Because the Firm does not maintain a custodial relationship or direct access to client accounts, the client is responsible for providing updated &amp; complete account information upon request. As an advice-only firm, Tayyib Investments LLC does not have access to client credentials and does not directly implement optimization recommendations.
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Optional Halal &amp; Values-Aligned Application</h2>
+        <div class="intro-text">
+            All investment advice offered at Tayyib Investments LLC can have ‘Halal’ or ethical options incorporated into them. This means investment advice or recommendations will comply with principles of Shariah (Islamic law) as much as practically possible. This comes at no additional charge but requires clients to state these restrictions explicitly in the advisory agreement.
+        </div>
+
+        <div class="disc-box">
+            <h4>Halal Investment Risk &amp; Screening Disclaimers</h4>
+            <p style="margin-bottom: 1rem; font-style: italic;">
+                Since halal or Shariah-compliant investing limits the available investment vehicles, such investments are exposed to additional risks that are not found in traditional investments.
+            </p>
+            <p style="margin-bottom: 1rem;">
+                The Firm will make reasonable efforts to provide investment recommendations consistent with the Client’s stated restrictions; however, the Firm cannot and does not guarantee that all recommendations will fully conform to any particular interpretation, standard, or methodology of halal or values-based compliance.
+            </p>
+            <p style="margin-bottom: 1rem;">
+                The Firm and its Investment Adviser Representatives are not qualified to provide religious rulings, fatwas, or certifications regarding halal compliance. The Firm does not independently verify, audit, or certify the accuracy, completeness, or ongoing validity of any third-party halal screening data, classifications, or compliance determinations.
+            </p>
+            <p>
+                The Client acknowledges that interpretations of halal compliance may vary among scholars, organizations, screening providers, and methodologies, and that the Firm cannot ensure that any investment will be deemed compliant under all or any religious interpretations. The Firm may lack the expertise to evaluate complex or technical religious determinations and relies, in part, on information provided by third parties, which may contain errors, omissions, or inconsistencies. Clients are encouraged to consult qualified religious scholars or advisers regarding religious compliance determinations. The Client remains solely responsible for determining whether any investment meets the Client’s personal religious or values-based standards.
+            </p>
+        </div>
+    </section>
+
+    <section style="background-color: var(--bg-light); border-top: 1px solid var(--border);">
+        <h2 class="section-title">Client Suitability Framework</h2>
+        <div style="max-width: 850px; margin: 0 auto; text-align: justify; color: var(--primary-text); line-height: 1.75;">
+            <p style="margin-bottom: 1.25rem;">
+                All the advice we provide is tailored to individual clients, and in line with their respective investment goals and constraints. We understand that different clients share different investment needs and risk tolerances, thus a good investment for one client may not be suitable for another.
+            </p>
+            <p>
+                Our advice is always for the best interest of our clients and will always be suitable considering their risk/return objectives. We do this by having each client complete comprehensive questionnaires regarding their income, tax bracket, previous investment experience, investment goals, time horizons, and unique limitations. Then, suitable investments matching the client are systematically selected and discussed with them.
+            </p>
+        </div>
+    </section>
+
+    <section style="padding-top: 0;">
+        <div class="framework-box">
+            <h3>Our Fiduciary Operational Structure</h3>
+            <p style="color: #ffffff;">We are dedicated to providing pure, independent fee-for-service advice completely isolated from traditional transactional conflicts of interest. Our operational model is explicitly defined:</p>
+            <ul class="framework-list">
+                <li><div><strong>Advice-Only Strategy:</strong> We limit our scope strictly to objective investment advice; we do not accept direct management or custody of client assets.</div></li>
+                <li><div><strong>Non-Discretionary Framework:</strong> We advise while you retain complete asset execution control. No choices are made without your prior explicit authorization.</div></li>
+                <li><div><strong>Zero Speculative Strategy:</strong> Our rules strictly prohibit high-risk practices such as short selling, margin deployment, or speculative trading styles.</div></li>
+                <li><div><strong>No Third-Party Solicitors:</strong> We employ no promoters, distributors, or solicitors, guaranteeing that our client engagements remain entirely transparent and direct.</div></li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="contact-container">
+            <h2 class="section-title" style="margin-bottom: 1.5rem;">Corporate Communications</h2>
+            <p style="font-size: 1.1rem; max-width: 650px; margin: 0 auto; color: var(--primary-text);">
+                To explore our strategic asset management methodology or learn more regarding our independent operational model, reach out directly.
+            </p>
+            <p class="contact-email">tayyibinvestments@outlook.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="disclosure-text">
+                <strong>Regulatory Disclosures:</strong> Tayyib Investments LLC is a registered investment adviser. Information presented on this platform is for educational and informational purposes only and does not constitute an explicit individual offer or solicitation to purchase or liquidate specific securities. All market structures involve systemic risk of loss, including the possible loss of original principal. Past performance is never indicative of future operational outcomes. The firm's advice-only consultation services are completely non-discretionary and exclude account fee deductions or custodial asset holdings.
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Tayyib Investments LLC. All rights reserved.</div>
+                <div>Principal Office: Ohio</div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
